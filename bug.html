@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    // Incorrectly using innerHTML to append an entire <div> element
+    document.getElementById("myDiv").innerHTML += "<div><p>This is more text.</p></div>";
+    //This will not work as intended because it will replace the existing content of the div and the <p> tag inside of it.
+  </script>
+</body>
+</html>
